@@ -1,0 +1,97 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* set body to full screen width/height */
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    /* set font to imported font from Google */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* parent container styles  */
+section {
+    background-attachment: red;
+    height: 100%;
+    width: 100%;
+    /* center child container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    /* 1 em is 16px (browser default) */
+    font-size: 2em;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+
+
+/* Form elements */
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    border-radius: 1em;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* location  */
+form .location {
+    background-color: lightblue;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+    border-radius: 1em 0 0 1em;
+}
+
+form .location img {
+    width: 1.2em;
+    height: 1.2em;
+}
+/* search bar */
+input[type='search']{
+    border: 0;
+    height: 100%;
+    padding: 1em;
+    width: 100%;
+}
+input[type='search']::placeholder{
+    color: #222;
+    font-size: 1em;
+}
+
+button {
+    border: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0 1em 1em 0;
+    background-color: #388fe5;
+    color: white;
+    width: max-content;
+    padding: 1em;
+}
+button:hover {
+    opacity: .9;
+}

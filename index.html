@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Search Bar</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/main.css">
+    <!-- Fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <h2>Find a place for your dream vacation</h2>
+            <p>Downtown or in nature</p>
+            <!-- We use a 'Search' input type for search bars -->
+            <form action="">
+                <div class="location">
+                    <img src="/location.svg" alt="">
+                </div>
+                <input type="search" placeholder="Marseille, France">
+                <button>Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script>
+        // Selecting the elements on the page and grabbing the values 
+        const form = document.querySelector('form');
+        const searchInput = document.querySelector("input[type='search']")
+        form.addEventListener('submit', (e) => {
+            // Prevent default prevents the page from reloading
+            e.preventDefault()
+            // Alert the search input when the user click the 'Search' Button
+            alert(`Searching for ${ searchInput.value }`)
+            // Reseting the search value to an empty string
+            searchInput.value = ''
+        })
+    </script>
+    
+</body>
+
+</html>
